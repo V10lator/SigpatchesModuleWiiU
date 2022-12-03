@@ -30,7 +30,7 @@
 
 #include <mocha/mocha.h>
 
-int main(int argc, char **argv)
+int main()
 {
     if (Mocha_InitLibrary() == MOCHA_RESULT_SUCCESS) {
         Mocha_IOSUKernelWrite32(0x5014cac,0x20004770); // patch_MCP_authentication_check
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
         Mocha_IOSUKernelWrite32(0x5054d70,0xe12fff1e); // patch_cached_cert_check - second u32
         Mocha_DeInitLibrary();
     }
-    
+
     return 0;
 }
 
