@@ -26,10 +26,8 @@ INCLUDES	:=	source include
 #-------------------------------------------------------------------------------
 # options for code generation
 #-------------------------------------------------------------------------------
-CFLAGS	:=	-ffunction-sections -fno-exceptions \
-			$(MACHDEP)
-
-CFLAGS	+=	$(INCLUDE) -D__WIIU__ -D__WUT__
+CFLAGS	:=	$(MACHDEP) -ffunction-sections -fno-exceptions \
+		$(INCLUDE) -D__WIIU__ -D__WUT__
 
 ifeq ($(DEBUG),1)
 CFLAGS += -Og -DDEBUG -g
