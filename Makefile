@@ -38,7 +38,7 @@ endif
 CXXFLAGS	:= $(CFLAGS) -std=c++20 -fno-rtti
 
 ASFLAGS	:=	-g $(ARCH)
-LDFLAGS	=	-g $(ARCH) $(RPXSPECS) -Wl,-Map,$(notdir $*.map)
+LDFLAGS	=	-g $(ARCH) $(RPXSPECS) --entry=_start -Wl,-Map,$(notdir $*.map)
 
 LIBS	:= -lmocha -lwut
 
